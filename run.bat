@@ -1,5 +1,5 @@
 git pull origin master
 git pull origin master
 git add .
-git commit -m "local put"
+git commit -m "init"
 git push origin master 
