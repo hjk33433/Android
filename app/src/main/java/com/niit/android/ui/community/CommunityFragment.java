@@ -1,4 +1,4 @@
-package com.example.android.ui.notifications;
+package com.niit.android.ui.community;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,23 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.android.databinding.FragmentNotificationsBinding;
+import com.niit.android.databinding.FragmentCommunityBinding;
 
-public class NotificationsFragment extends Fragment {
 
-    private FragmentNotificationsBinding binding;
+public class CommunityFragment extends Fragment {
+
+    private FragmentCommunityBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        NotificationsViewModel notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
+        CommunityViewModel communityViewModel =
+                new ViewModelProvider(this).get(CommunityViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentCommunityBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textCommunity;
+        communityViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

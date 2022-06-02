@@ -3,23 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_index">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.android.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_index"
+        android:name="com.niit.android.ui.index.IndexFragment"
+        android:label="@string/title_index"
+        tools:layout="@layout/fragment_index" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.android.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_mv"
+        android:name="com.niit.android.ui.mv.MvFragment"
+        android:label="@string/title_MV"
+        tools:layout="@layout/fragment_mv" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.android.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_community"
+        android:name="com.niit.android.ui.community.CommunityFragment"
+        android:label="@string/title_community"
+        tools:layout="@layout/fragment_community" />
+    <fragment
+        android:id="@+id/navigation_mine"
+        android:name="com.niit.android.ui.mime.MineFragment"
+        android:label="@string/title_mine"
+        tools:layout="@layout/fragment_community" />
 </navigation>

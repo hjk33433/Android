@@ -1,4 +1,4 @@
-package com.example.android.ui.dashboard;
+package com.niit.android.ui.mv;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.android.databinding.FragmentDashboardBinding;
+import com.niit.android.databinding.FragmentMvBinding;
 
-public class DashboardFragment extends Fragment {
+public class MvFragment extends Fragment {
 
-    private FragmentDashboardBinding binding;
+    private FragmentMvBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        DashboardViewModel dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
+        MvViewModel mvViewModel =
+                new ViewModelProvider(this).get(MvViewModel.class);
 
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
+        binding = FragmentMvBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textDashboard;
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textMv;
+        mvViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
